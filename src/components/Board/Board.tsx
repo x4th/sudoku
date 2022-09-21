@@ -56,7 +56,7 @@ function isColumnsUnique(boardState: Tuple9<Tuple9<CellValue>>) {
   for (let i = 0; i < BOARD_ROWS; i++) {
     valuesSet = new Set();
     for (let j = 0; j < BOARD_COLS; j++) {
-      let v = boardState[i][j];
+      let v = boardState[j][i];
       if (v === null) continue;
       if (valuesSet.has(v)) return false;
       valuesSet.add(v);
